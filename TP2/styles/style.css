@@ -1,0 +1,182 @@
+body{
+    background-image: url("https://wallpapercrafter.com/desktop/144695-Rick-and-Morty-drawing-cartoon-monochrome.png");
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.fondo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom:20px;
+    background-color: #535353fd;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    border: solid;
+    border-color: #10cc59;
+}
+
+.textarea{
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    height: 40%;
+    bottom: 200px;
+
+    background-color: #82828e;
+
+    border: solid;
+    border-color: #10cc59;
+    border-radius: 8%;
+    border-width: 3px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.315);
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    bottom:100px;
+    left:200px;
+}
+
+
+#consulta1{
+    position: relative;
+    height: 30px;
+    right: 22px;
+    max-height: 30px;
+
+    border-radius: 10%;
+
+    background-color:#c0dcc1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#consulta2 {
+    position: relative;
+    background-color: #c0dcc1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    right: 200px;
+    top: 50px;
+
+    border-radius: 10%;
+
+}
+
+
+
+
+
+:hover#consulta{
+    background-color: #9cb49d;
+}
+
+#buscar{
+    background-color: #c0dcc1;
+
+    border-radius: 15%;
+    height: 50px;
+
+    font-size: medium;
+
+    position: relative;
+    right: 330px;
+    top: 100px;
+}
+
+:hover#buscar{
+    background-color: #9cb49d;
+    text-decoration: underline;
+}
+
+
+footer{
+    background-color: #1b1b1f;
+    padding-left: 50px;
+    border: solid;
+    border-color: #82828e;
+    border-width: 2px;
+    color: #a4a4a5;
+    position: absolute;
+    width: 100%;
+    bottom: 1px;
+    right: 1px;
+
+}
+
+.container {
+    bottom: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+}
+
+.mostrar1{
+    padding: 10px;
+    padding-left: 10px;
+    background-color: #82828e;
+    width: 25%;
+    position: relative;
+    left: 10%;
+
+    border: solid;
+    border-color: #10cc59;
+    border-radius: 8%;
+    border-width: 3px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.mostrar2 {
+    padding: 10px;
+    padding-left: 10px;
+    background-color: #82828e;
+    width: 25%;
+
+    position: relative;
+    left:35%;
+    
+    border: solid;
+    border-color: #10cc59;
+    border-radius: 8%;
+    border-width: 3px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.imagen-redonda{
+    position: relative;
+    border-radius: 50%;
+    width: 25%;
+    border: solid;
+    border-color: #10cc59;
+    border-width: 3px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+
+
+
+
+
