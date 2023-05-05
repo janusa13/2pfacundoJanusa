@@ -3,6 +3,10 @@ function consultar() {
   let aux1 = document.getElementById("consulta1").value;
   let aux2 = document.getElementById("consulta2").value;
 
+  if (!aux1 || !aux2) {
+    alert("Debes ingresar los numeros");
+    return;
+  }
   //SE OBTIENE EL VALOR DE LA API Y SE FORMA LA URL CON EL ID//
   fetch("https://rickandmortyapi.com/api/character/" + aux1 + "," + aux2)
     //SE TRANSFORMA LA INFORMACION A JSON//
@@ -78,6 +82,8 @@ function consultar() {
       //vaciar el resultado
       resultado1.innerHTML = "";
       resultado2.innerHTML = "";
+      resultado1.style.display = "block";
+      resultado2.style.display = "block";
 
       //SE CREAN HIJOS DE RESULTADOS CON LOS DATOS.
       resultado1.appendChild(imagen1);
