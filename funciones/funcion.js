@@ -62,12 +62,12 @@ function consultar() {
         episodios1.textContent =
           "Cantidad de Episodios: " +
           data[0].episode.length +
-          "  Personaje con mas capitulos  ";
+          "  Personaje con mas capitulos 👑 ";
       } else if (data[1].episode.length > data[0].episode.length) {
         episodios2.textContent =
           "Cantidad de Episodios: " +
           data[1].episode.length +
-          "  Personaje con mas capitulos ";
+          "  Personaje con mas capitulos 👑 ";
       }
 
       //LOS ELEMENTOS CREADOS ANTERIORMENTE SE DECLARAN HIJOS DE RESULTADOS
