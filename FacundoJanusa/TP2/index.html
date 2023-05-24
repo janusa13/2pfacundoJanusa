@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP2</title>
+</head>
+<body>
+    <div class="fondo">
+            <div class="textarea">
+                <img src="recursos/R.png" width="25%" id="logo">
+                <input  type="text" id="consulta1" placeholder="Numero 1" required>
+                <input type="text" id="consulta2" placeholder="Numero 2" required>
+                <button type="submit" onclick="consultar()" id="buscar">Buscar</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mostrar1" id="resultado1" style="visibility: hidden"></div>
+            <div class="mostrar2" id="resultado2" style="visibility: hidden"></div>
+
+        </div>
+    </div>
+</body>
+<footer>
+    <p class="contentft">Trabajo practico numero 2 ~ </p>
+    <a class="a" id="rick_link" href="https://rickandmortyapi.com/" target="_blank">The Rick and morty API</a>
+    <a class="gitlink" href="https://github.com/janusa13/2pfacundoJanusa/tree/main/TP2" target="_blank"><img src="recursos/Octicons-mark-github.svg.png" width="50%" id="git" class="git"></a>
+</footer>
+
+</html>
+<script src="funciones/funcion.js"></script>
+
+
+
+<!--PAGINA QUE INGRESE DATOS Y TE DEVUELVA LA INFORMACION DEL PERSONAJE
+    QUE CORRESPONDA EL NUMERO INGRESADO
+    HTTP, JSON, APIS, AJAX, FETCH-->
+    
+    <!--en la pantalla de inicio, poner dos personajes, mostrar dos datos, y decir cual de los dos 
+    aparece en mas episodios.-->
