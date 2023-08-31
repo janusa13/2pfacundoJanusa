@@ -1,8 +1,8 @@
 <?php
 
-include 'Banco.php';
-include 'CuentaBancaria.php';
-include 'Persona.php';
+require_once 'Banco.php';
+require_once 'CuentaBancaria.php';
+require_once 'Persona.php';
 
 //creamos instancias de personas
 $persona1 = new Persona("Facundo","Janusa",24,"1234565","1");
