@@ -3,6 +3,7 @@ class CuentaBancaria{
     public $numeroDeCuenta;
     public $titular;
     public $saldo;
+    public const LIMITE=-500;
 
     function __construct($numeroDeCuenta,$titular,$saldo){
         $this->numeroDeCuenta=$numeroDeCuenta;
@@ -19,17 +20,25 @@ class CuentaBancaria{
     }
 
     function retirarSaldo($cantidad){
-        if ($this->saldo>=$cantidad) {
+        if ($cantidad>=self::LIMITE) {
             $this->saldo-=$cantidad;
-        }else{
-            echo('Saldo insuficiente.');
+        if($this->saldo<0){
+            echo("Usted realizo un sobregiro");
         }
     }
-
 }
 
-
-
-
-
+     function transferencia($monto, $cuentaOrigen, $cuentaDestino){
+        if($this->numeroDeCuenta ==$cuentaOrigen ){
+            $this->saldo-=$monto;
+            if($this->numeroDeCuenta ==$cuentaDestino){
+                $this->saldo+=$monto;
+                echo("transferencia exitosa");
+            }
+            
+        }else{
+            echo("error");
+        }
+    }
+}
 ?>

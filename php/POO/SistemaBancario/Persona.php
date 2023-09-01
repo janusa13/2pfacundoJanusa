@@ -9,7 +9,11 @@ class Persona{
     function __construct($nombre, $apellido,$edad,$dni, $numeroDeCuenta){
     $this->nombre=$nombre;
     $this->apellido=$apellido;
-    $this->edad=$edad;
+    if($edad<0){
+        $this->edad=18;
+    }else{
+        $this->edad=$edad;
+    };
     $this->dni=$dni;
     $this->numeroDeCuenta=$numeroDeCuenta;
     }

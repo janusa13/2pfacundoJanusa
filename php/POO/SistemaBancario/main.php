@@ -4,34 +4,42 @@ require_once 'Banco.php';
 require_once 'CuentaBancaria.php';
 require_once 'Persona.php';
 
+
 //creamos instancias de personas
 $persona1 = new Persona("Facundo","Janusa",24,"1234565","1");
 $persona2 = new Persona ("Daian","Fernandez",25,"47568","2");
+
 
 //creamos cuentas bancarias
 $cuenta1= new CuentaBancaria("1",$persona1,4000);
 $cuenta2= new CuentaBancaria("2",$persona2,2000);
 
+
 //Creamos Banco
 $banco = new Banco("Santander","Calle falsa 123");
+
 
 //Agregar cuentas
 $banco ->agregarCuenta($cuenta1);
 $banco ->agregarCuenta($cuenta2);
 
+
 //Operaciones en las cuentas
 $cuenta1 ->depositarSaldo(1000);
-$cuenta2 ->retirarSaldo(500);
+$cuenta2 ->retirarSaldo(2300);
 
 
 //buscamos cuenta bancaria
-
 $cuentaEncontrada = $banco->buscarCuentaPorTitular("Facundo","Janusa");
     if($cuentaEncontrada){
         echo"Cuenta encontrada: ".$cuentaEncontrada->numeroDeCuenta;
     }else{
         echo"No se ha encontrado cuenta";
     }
+
+
+//transferimos dinero de una cuenta a otra
+//$cuenta1->transferencia(500, 1, 2);
 
 var_dump($cuenta1);
 var_dump($cuenta2);
@@ -42,9 +50,25 @@ Persona: nombre, apellido, edad, DNI.
 Banco: Nombre, direccion, lista de cuentas. Metodos: constructor(nombre, direccion). Agregar cuenta:(cuenta). Buscar cuenta por titular(nombre, apellido.) return(cuenta bancaria de la persona.)
 Clase CuentaBancaria: Numero de cuenta. Titular(instacia de persona). Saldo. Metodos: constructor:inicializar el numero de cuenta, titular y saldo. Metodo: depositar(cantidad). Retirar(cantidad). 
 
-1. Crear: al menos dos instancias de la clase persona y dos o mas de la case cuenta bancaria. 
-2. Realizar una instancia de la clase banco y agregar las cuentas bancarias CB a la lista del verbo
-3. Realizar las siguientes operaciones: 1. deposita diferentes cantidades en las cuentas bancarias. 2: realiza retiros de diferentees montos de la cuenta bancaria revisando que haya saldo suficiente. 
-4.Busca una cuenta bancaria por el titular (nombre y apellido) utilizando el metodo (buscarCuentaPorTitular) */
+A. Crear: al menos dos instancias de la clase persona y dos o mas de la case cuenta bancaria. 
+
+B. Realizar una instancia de la clase banco y agregar las cuentas bancarias CB a la lista del verbo
+
+C. Realizar las siguientes operaciones: 
+
+C.1. deposita diferentes cantidades en las cuentas bancarias. 
+
+C.2: realiza retiros de diferentees montos de la cuenta bancaria revisando que haya saldo suficiente.
+
+C.3.Busca una cuenta bancaria por el titular (nombre y apellido) utilizando el metodo (buscarCuentaPorTitular)
+
+C.4. Crear una funcion "transferir" ($monto, $CuentadeOrigen,$CuentaDestino) en la clase cuenta bancaria que permita transferir un monto a otra cuenta
+    ACTUALIZAR LOS SALDOS DE AMBAS CUENTAS
+    
+C.5. Aniade una verificacion al construct de persona para que la edad sea <0 
+    si no lo es que se le otorgue por defecto 18
+    
+C.6. Modificar el metodo "retirar" para permitir retiro incluso si no hay saldo suficiente, pero con un limite de sobregiro.
+    Definir una const que se llame limit para controlar el sobregiro*/
 
 ?>
